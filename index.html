@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Racing Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Start Menu -->
+    <header id="startMenu" aria-label="Start Menu">
+        <h1>🚗 Car Racing Game</h1>
+        <button id="startButton" aria-label="Start the game">Start Game</button>
+    </header>
+
+    <!-- Main Game Section -->
+    <main id="gameContainer" style="display:none;">
+        <canvas id="gameCanvas" width="400" height="600" aria-label="Racing game canvas"></canvas>
+        
+        <section id="gameInfo">
+            <div id="scoreBoard" aria-live="polite">Score: 0</div>
+            <div id="livesDisplay" aria-live="polite">Lives: 3</div>
+        </section>
+        
+        <section id="gameStatus" aria-live="assertive">
+            <div id="gameOver" role="alert">Game Over</div>
+            <div id="gameWon" role="alert">You Won!</div>
+        </section>
+        
+        <button id="restartButton" aria-label="Restart the game">Restart</button>
+    </main>
+
+    <!-- Leaderboard Section -->
+    <section id="leaderboard" aria-labelledby="leaderboardTitle">
+        <h2 id="leaderboardTitle">Leaderboard</h2>
+        <div id="highScore" aria-live="polite">High Score: 0</div>
+        <ul id="scoreList" aria-live="polite"></ul>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
